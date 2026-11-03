@@ -65,6 +65,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<!--
+		The GH3 Keyboard plugin's source, compiled in here too, so its strum logic is tested with a clock and keys the
+		tests give it. The program still loads its own build of the plugin, embedded in x360ce.exe.
+		-->
+		<Compile Include="..\Plugins\GH3Keyboard\GH3Keyboard.cs" Link="Plugins\GH3Keyboard.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<!-- The live service contract as published on 2026-09-19; the WSDL test compares a target against it. -->
 		<None Update="WebServices\live.wsdl" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
